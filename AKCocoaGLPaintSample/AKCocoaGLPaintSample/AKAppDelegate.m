@@ -10,13 +10,9 @@
 
 @implementation AKAppDelegate
 
-@synthesize paintControl = _paintControl;
-@synthesize paintView = _paintView;
-@synthesize window = _window;
-
 - (void)dealloc
 {
-    [super dealloc];
+    
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification

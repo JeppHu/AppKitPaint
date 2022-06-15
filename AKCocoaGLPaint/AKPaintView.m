@@ -107,12 +107,8 @@
 		brushTexture = 0;
 	}
     
-    [_paintSession release];
-    
     self.brush = nil;
     self.brushColor = nil;
-    
-    [super dealloc];
 }
 
 #pragma mark -
@@ -120,7 +116,7 @@
 
 - (void)updateMatrices
 {
-    NSRect bounds = [self bounds];
+    NSRect bounds = NSMakeRect(0, 0, self.bounds.size.width * NSScreen.mainScreen.backingScaleFactor, self.bounds.size.height * NSScreen.mainScreen.backingScaleFactor);
 	
     if (!NSEqualRects(bounds, lastBounds)) {
         
@@ -148,8 +144,7 @@
     
     [_paintSession setDataArray:dataArray];
     
-    [sessionPrevDataArray release];
-    sessionPrevDataArray = [dataArray retain];
+    sessionPrevDataArray = dataArray;
     
     [self setNeedsDisplay:YES];
 }
@@ -158,7 +153,7 @@
     
     AKPaintStep* step = [[AKPaintStep alloc] initWithColor:self.brushColor start:start end:end pointSize:self.pointSize hardness:self.hardness eraser:self.eraser alpha:self.pointAlpha brushPixelStep:self.brushPixelStep];
     
-    return [step autorelease];
+    return step;
 }
 
 
@@ -277,7 +272,7 @@
     i;
     
 	// Convert locations from Points to Pixels
-	CGFloat scale = 1; //self.contentScaleFactor;
+    CGFloat scale = NSScreen.mainScreen.backingScaleFactor; //self.contentScaleFactor;
 	start.x *= scale;
 	start.y *= scale;
 	end.x *= scale;

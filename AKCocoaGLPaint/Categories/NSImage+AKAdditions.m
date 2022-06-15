@@ -29,7 +29,7 @@
 
 - (NSImage *)imageWithAlpha:(float)alpha {
     
-    NSImage *dragImage = [[[NSImage alloc] initWithSize:[self size]] autorelease];
+    NSImage *dragImage = [[NSImage alloc] initWithSize:[self size]];
     
     [dragImage lockFocus];
     [self drawAtPoint:NSZeroPoint fromRect:NSZeroRect operation:NSCompositeSourceOver fraction:alpha];

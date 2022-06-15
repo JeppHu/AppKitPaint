@@ -30,7 +30,7 @@ static void memswap(unsigned char *a, unsigned char *b, unsigned int bytes)
 	unsigned char *bitmapData;
 	NSImage *image;
 	
-	bounds = [self bounds];
+	bounds = bounds = NSMakeRect(0, 0, self.bounds.size.width * NSScreen.mainScreen.backingScaleFactor, self.bounds.size.height * NSScreen.mainScreen.backingScaleFactor);
 	
 	height = bounds.size.height;
 	width = bounds.size.width;
@@ -72,12 +72,12 @@ static void memswap(unsigned char *a, unsigned char *b, unsigned int bytes)
     
 	// Create the NSImage from the bitmap
     
-	image = [[[NSImage alloc] initWithSize: NSMakeSize(width, height)] autorelease];
+	image = [[NSImage alloc] initWithSize: NSMakeSize(width, height)];
 	[image addRepresentation: imageRep];
 	
 	// Release memory
 	
-	[imageRep release];
+	
     
 	// Previously we did not flip the bitmap, and instead did [image setFlipped:YES];
 	// This does not work properly (i.e., the image remained inverted) when pasting

@@ -74,8 +74,6 @@
     self.brushImage = nil;
     
     self.paintView = nil;
-    
-    [super dealloc];
 }
 
 
@@ -100,8 +98,7 @@
 
 - (void)setColor:(NSColor *)color {
     
-    [_color release];
-    _color = [color retain] ;
+    _color = color;
     
     self.paintView.brushColor = _color;
 }
@@ -136,10 +133,10 @@
     
     NSString *brushkImgName = [NSString stringWithFormat:@"Brush_hardness_%i", (int)hardness*100];
     NSImage *brush = [[NSImage alloc] initWithData:[NSData dataWithContentsOfFile:[bundle pathForResource:brushkImgName ofType:@"png"]]];
-    [brush autorelease];
     
-    if(alpha != 1)
+    if(alpha != 1) {
         brush = [brush imageWithAlpha:alpha];
+    }
     
     return brush;
 }

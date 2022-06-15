@@ -72,7 +72,6 @@
     
     self.color = nil;
     
-    [super dealloc];
 }
 
 @end
