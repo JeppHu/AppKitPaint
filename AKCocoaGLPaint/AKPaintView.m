@@ -65,6 +65,7 @@
 
 - (void)prepareOpenGL
 {
+    [super prepareOpenGL];
     _paintSession = [[AKPaintSession alloc] init];
     
     GLint parm = 1;

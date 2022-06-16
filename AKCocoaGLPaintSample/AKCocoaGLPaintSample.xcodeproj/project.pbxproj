@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E98BD42217A92A1300128D06 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98BD42117A92A1300128D06 /* Cocoa.framework */; };
 		E98BD42C17A92A1300128D06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E98BD42A17A92A1300128D06 /* InfoPlist.strings */; };
 		E98BD42E17A92A1300128D06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E98BD42D17A92A1300128D06 /* main.m */; };
-		E98BD43217A92A1300128D06 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E98BD43017A92A1300128D06 /* Credits.rtf */; };
 		E98BD43517A92A1300128D06 /* AKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E98BD43417A92A1300128D06 /* AKAppDelegate.m */; };
 		E98BD43817A92A1300128D06 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E98BD43617A92A1300128D06 /* MainMenu.xib */; };
 		E98BD45617A92A8E00128D06 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E98BD45517A92A8E00128D06 /* OpenGL.framework */; };
@@ -34,7 +33,6 @@
 		E98BD42B17A92A1300128D06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E98BD42D17A92A1300128D06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E98BD42F17A92A1300128D06 /* AKCocoaGLPaintSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AKCocoaGLPaintSample-Prefix.pch"; sourceTree = "<group>"; };
-		E98BD43117A92A1300128D06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		E98BD43317A92A1300128D06 /* AKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AKAppDelegate.h; sourceTree = "<group>"; };
 		E98BD43417A92A1300128D06 /* AKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AKAppDelegate.m; sourceTree = "<group>"; };
 		E98BD43717A92A1300128D06 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				E98BD42A17A92A1300128D06 /* InfoPlist.strings */,
 				E98BD42D17A92A1300128D06 /* main.m */,
 				E98BD42F17A92A1300128D06 /* AKCocoaGLPaintSample-Prefix.pch */,
-				E98BD43017A92A1300128D06 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -192,7 +189,7 @@
 				ORGANIZATIONNAME = KorbCorp;
 			};
 			buildConfigurationList = E98BD41917A92A1300128D06 /* Build configuration list for PBXProject "AKCocoaGLPaintSample" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -215,7 +212,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E98BD42C17A92A1300128D06 /* InfoPlist.strings in Resources */,
-				E98BD43217A92A1300128D06 /* Credits.rtf in Resources */,
 				E98BD43817A92A1300128D06 /* MainMenu.xib in Resources */,
 				E98BD45B17A92B2800128D06 /* bgImg.jpg in Resources */,
 				E9CA67F817A938ED007A286F /* Brushes.bundle in Resources */,
@@ -249,14 +245,6 @@
 				E98BD42B17A92A1300128D06 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		E98BD43017A92A1300128D06 /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E98BD43117A92A1300128D06 /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		E98BD43617A92A1300128D06 /* MainMenu.xib */ = {

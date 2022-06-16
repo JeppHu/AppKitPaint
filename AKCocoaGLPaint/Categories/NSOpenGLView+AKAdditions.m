@@ -30,7 +30,7 @@ static void memswap(unsigned char *a, unsigned char *b, unsigned int bytes)
 	unsigned char *bitmapData;
 	NSImage *image;
 	
-	bounds = bounds = NSMakeRect(0, 0, self.bounds.size.width * NSScreen.mainScreen.backingScaleFactor, self.bounds.size.height * NSScreen.mainScreen.backingScaleFactor);
+	bounds = NSMakeRect(0, 0, self.bounds.size.width * NSScreen.mainScreen.backingScaleFactor, self.bounds.size.height * NSScreen.mainScreen.backingScaleFactor);
 	
 	height = bounds.size.height;
 	width = bounds.size.width;
